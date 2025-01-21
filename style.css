@@ -1,3 +1,79 @@
-*body{
-    margin: 0%;
+*{
+    text-decoration: none;
+}
+body{
+    background-image: url(IMG1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: orangered;
+    padding-left: 5%;
+}
+ul{
+    float: right;
+    margin-right: 30%;
+    font-weight: bolder;
+}
+ul li{
+    display: inline-block;
+    margin: 0 9px;
+    line-height: 10px;
+    padding-inline: 30px;
+}
+ul li a{
+    color: orangered;
+    font-size: 20px;
+}
+.btn{
+    float: right;
+    margin-right: -72%;
+    margin-top: 0.8%;
+    background-color: orangered;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 16px;
+    border: 2px solid orangered;
+    font-style: italic;
+    cursor: pointer;
+}
+.p1{
+    float: right;
+    margin-right: -63%;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: -1%;
+    color: rgb(4, 122, 14);
+}
+.heading{
+    text-align: center;
+    margin-top: 30%;
+    font-style: italic;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+}
+.box{
+    width: 170px;
+    height: 160px;
+    text-align: center;
+}
+.box1{
+    background-color: brown;
+    margin-left: 10%;
+    margin-top: 15%;
+}
+.box2{
+    margin-left: 40%;
+    margin-top: -11.5%;
+    background-color: brown;
+}
+.box3{
+    margin-left: 70%;
+    margin-top: -11.8%;
+    background-color: rgb(241, 7, 7);
 }
