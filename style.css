@@ -40,6 +40,21 @@ ul li a{
     font-style: italic;
     cursor: pointer;
 }
+.btn1{
+    background-color: orangered;
+    color: aliceblue;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    border: 3px solid orangered;
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+h3{
+    font-size: 20px;
+}
 .p1{
     float: right;
     margin-right: -63%;
@@ -65,7 +80,7 @@ ul li a{
 .box1{
     background-color: brown;
     margin-left: 10%;
-    margin-top: 15%;
+    margin-top: 12%;
 }
 .box2{
     margin-left: 40%;
