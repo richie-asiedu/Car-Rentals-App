@@ -80,15 +80,202 @@ h3{
 .box1{
     background-color: brown;
     margin-left: 10%;
-    margin-top: 12%;
+    width: 200px;
+    margin-top: 10%;
 }
 .box2{
     margin-left: 40%;
-    margin-top: -11.5%;
+    margin-top: -12.8%;
     background-color: brown;
 }
 .box3{
     margin-left: 70%;
-    margin-top: -11.8%;
+    margin-top: -12.8%;
     background-color: rgb(241, 7, 7);
+}
+#main{
+    float: right;
+    margin-right: 20%;
+}
+.main{
+    margin-top: 10%;
+    padding-left: 10%;
+}
+#main1{
+    margin-top: 25%;
+}
+.img{
+    float: right;
+    margin-top: -15%;
+    margin-right: 10%;
+}
+#main2{
+    margin-top: 22%;
+    margin-left: 7%;
+}
+#box4{
+    margin-left: 6.7%;
+}
+#box4 p{
+    margin-top: -13%;
+    font-weight: bold;
+    font-size: 12px;
+}
+#box4 h1{
+    font-weight: bold;
+    font-size: 16px;
+}
+.btn2{
+    border-radius: 10px;
+    border: 2px solid;
+    background-color: black;
+    color: antiquewhite;
+    margin-left: 60%;
+    margin-top: 30%;
+    font-size: 12.1px;
+}
+.icon{
+    margin-top: -30%;
+    padding-inline: 20px;
+    color: rgb(10, 247, 117);
+    font-size: 20px;
+}
+
+@media (max-width: 852px) {
+    body{
+        background-image: url(IMG1.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .logo{
+        font-size: 23px;
+        font-weight: bold;
+        font-style: italic;
+        color: orangered;
+        padding-left: 0%;
+    }
+    ul{
+        float: right;
+        font-weight: bolder;
+        margin-left: -31%;
+        margin-top: 2px;
+    }
+    ul li{
+        display: inline-block;
+        margin: 0 4px;
+        line-height: 1px;
+        padding-inline: 1px;
+    }
+    ul li a{
+        color: orangered;
+        font-size: 13px;
+    }
+    h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    h3{
+        font-size: 15px;
+    }
+    .btn1{
+        background-color: orangered;
+        color: aliceblue;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 11px;
+        border: 3px solid orangered;
+    }
+    .p1{
+        float: right;
+        margin-right: -36%;
+        font-weight: bolder;
+        font-size: 15px;
+        margin-top: -2%;
+        color: rgb(4, 122, 14);
+    }
+    .heading{
+        text-align: center;
+        margin-top: 7%;
+        font-style: italic;
+        font-weight: bold;
+    }
+    .btn{
+        float: right;
+        margin-right: -52%;
+        margin-top: 0.8%;
+        background-color: orangered;
+        text-transform: uppercase;
+        color: aliceblue;
+        font-size: 12px;
+        border: 2px solid orangered;
+        font-style: italic;
+            cursor: pointer;
+    }
+    .box1{
+        background-color: brown;
+        margin-left: 0%;
+        margin-top: 15%;
+        width: 140px;
+    }
+    .box2{
+        margin-left: 35%;
+        margin-top: -47%;
+        background-color: brown;
+        width: 140px;
+    }
+    .box3{
+        margin-left: 70%;
+        margin-top: -47%;
+        background-color: rgb(241, 7, 7);
+        width: 140px;
+    }
+    .main{
+        margin-top: 20%;
+        padding-left: 0%;
+    }
+    #main{
+        float: right;
+        margin-right: 5%;
+        font-size: 10px;
+    }
+    #main1{
+        font-size: 11px;
+        margin-top: 30%;
+    }
+    .img{
+        float: right;
+        margin-top: -30%;
+        margin-right: 0%;
+    }
+    #main2{
+        margin-top: 30%;
+        margin-left: 0%;
+        font-size: 13px;
+    }
+    #box4{
+        margin-left: 0%;
+    }
+    #box4 p{
+        margin-top: -10%;
+        font-weight: bold;
+        font-size: 10px;
+    }
+    #box4 h1{
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .btn2{
+        border-radius: 10px;
+        border: 2px solid;
+        background-color: black;
+        color: antiquewhite;
+        margin-left: 60%;
+        margin-top: 30%;
+    }
+    .icon{
+        margin-top: -42%;
+        padding-inline: 18px;
+        color: rgb(10, 247, 117);
+        font-size: 20px;
+    }
 }
