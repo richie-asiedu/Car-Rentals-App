@@ -115,6 +115,7 @@ h3{
 }
 #box4{
     margin-left: 6.7%;
+    margin-top: 5%;
 }
 #box4 p{
     margin-top: -13%;
@@ -124,6 +125,32 @@ h3{
 #box4 h1{
     font-weight: bold;
     font-size: 16px;
+}
+#box5 p{
+    margin-top: -10%;
+    font-weight: bold;
+    font-size: 11px;
+}
+#box5 h1{
+    font-weight: bold;
+    font-size: 13px;
+}
+.box5{
+    margin-left: 43%;
+    margin-top: -33.3%;
+}
+#box6 p{
+    margin-top: -10%;
+    font-weight: bold;
+    font-size: 10px;
+}
+#box6 h1{
+    font-weight: bold;
+    font-size: 13px;
+}
+.box6{
+    margin-left: 80%;
+    margin-top: -33.3%;
 }
 .btn2{
     border-radius: 10px;
@@ -140,6 +167,111 @@ h3{
     color: rgb(10, 247, 117);
     font-size: 20px;
 }
+#footer{
+    background-color: rgb(10, 10, 90);
+    background-size: cover;
+    margin-top: 10%;
+    height: 1000px;
+}
+#footer h1{
+    padding-left: 5%;
+}
+#footer a{
+    padding-left: 5%;
+    margin-top: 10%;
+}
+#footer p{
+    padding-left: 5%;
+}
+#box7{
+    height: 750px;
+    width: 230px;
+    background: beige;
+    margin-left: 5%;
+}
+#box7 button{
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 30px;
+    border-color: orangered;
+}
+#box7 a{
+    font-weight: bold;
+    color: orangered;
+    font-size: 30px;
+}
+#box7 .button1{
+    cursor: pointer;
+    background-color: orangered;
+    font-size: 25px;
+    border-radius: 0px;
+    justify-content: center;
+}
+
+#box8{
+    height: 750px;
+    width: 230px;
+    background: beige;
+    margin-left: 210%;
+    margin-top: -288%;
+}
+#box8 button{
+border-radius: 10px;
+margin-top: 20%;
+margin-left: 10%;
+font-size: 30px;
+border-color: orangered;
+}
+#box8 a{
+font-weight: bold;
+color: orangered;
+font-size: 30px;
+}
+#box8 .button1{
+cursor: pointer;
+background-color: orangered;
+font-size: 25px;
+border-radius: 0px;
+}
+
+#box9{
+    height: 750px;
+    width: 230px;
+    background: beige;
+    margin-left: 220%;
+    margin-top: -290%;
+}
+#box9 button{
+border-radius: 10px;
+margin-top: 20%;
+margin-left: 10%;
+font-size: 30px;
+border-color: orangered;
+}
+#box9 a{
+font-weight: bold;
+color: orangered;
+font-size: 30px;
+}
+#box9 .button1{
+cursor: pointer;
+background-color: orangered;
+font-size: 25px;
+border-radius: 0px;
+}
+.test{
+    margin-top: 10%;
+}
+.test p{
+    margin-left: 6%;
+}
+.test h1{
+    font-weight: bold;
+    margin-left: 6%;
+}
+    
+
 
 @media (max-width: 852px) {
     body{
@@ -209,7 +341,7 @@ h3{
         font-size: 12px;
         border: 2px solid orangered;
         font-style: italic;
-            cursor: pointer;
+        cursor: pointer;
     }
     .box1{
         background-color: brown;
@@ -264,6 +396,32 @@ h3{
         font-weight: bold;
         font-size: 13px;
     }
+    #box5 p{
+        margin-top: -10%;
+        font-weight: bold;
+        font-size: 11px;
+    }
+    #box5 h1{
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .box5{
+        margin-left: 33%;
+        margin-top: -89.3%;
+    }
+    #box6 p{
+        margin-top: -10%;
+        font-weight: bold;
+        font-size: 10px;
+    }
+    #box6 h1{
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .box6{
+        margin-left: 67%;
+        margin-top: -89.3%;
+    }
     .btn2{
         border-radius: 10px;
         border: 2px solid;
@@ -277,5 +435,107 @@ h3{
         padding-inline: 18px;
         color: rgb(10, 247, 117);
         font-size: 20px;
+    }
+    #footer{
+        background-color: rgb(10, 10, 90);
+        background-size: cover;
+        margin-top: 10%;
+        height: 800px;
+    }
+    #footer h1{
+        padding-left: 5%;
+    }
+    #footer a{
+        padding-left: 5%;
+    }
+    #footer p{
+        padding-left: 5%;
+        font-size: 11px;
+    }
+    #box7{
+        height: 630px;
+        width: 120px;
+        background: beige;
+        margin-left: 5%;
+    }
+    #box7 button{
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 20px;
+    border-color: orangered;
+    }
+    #box7 a{
+    font-weight: bold;
+    color: orangered;
+    font-size: 25px;
+    }
+    #box7 .button1{
+    cursor: pointer;
+    background-color: orangered;
+    font-size: 13px;
+    border-radius: 0px;
+    }
+
+    #box8{
+        height: 630px;
+        width: 120px;
+        background: beige;
+        margin-left: 115%;
+        margin-top: -515%;
+    }
+    #box8 button{
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 20px;
+    border-color: orangered;
+    }
+    #box8 a{
+    font-weight: bold;
+    color: orangered;
+    font-size: 25px;
+    }
+    #box8 .button1{
+    cursor: pointer;
+    background-color: orangered;
+    font-size: 13px;
+    border-radius: 0px;
+    }
+
+    #box9{
+        height: 630px;
+        width: 120px;
+        background: beige;
+        margin-left: 115%;
+        margin-top: -513%;
+    }
+    #box9 button{
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 20px;
+    border-color: orangered;
+    }
+    #box9 a{
+    font-weight: bold;
+    color: orangered;
+    font-size: 25px;
+    }
+    #box9 .button1{
+    cursor: pointer;
+    background-color: orangered;
+    font-size: 13px;
+    border-radius: 0px;
+    }
+    .test{
+        margin-top: 15%;
+    }
+    .test p{
+        margin-left: 5%;
+    }
+    .test h1{
+        font-weight: bold;
+        margin-left: 5%;
     }
 }
