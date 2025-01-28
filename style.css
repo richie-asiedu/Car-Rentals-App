@@ -264,11 +264,83 @@ border-radius: 0px;
     margin-top: 10%;
 }
 .test p{
-    margin-left: 6%;
+    margin-left: 15%;
 }
 .test h1{
     font-weight: bold;
-    margin-left: 6%;
+    margin-left: 15%;
+}
+.testimonial img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 15%;
+}
+.testimonial .stars{
+    margin-left: 19%;
+}
+.name{
+    margin-left: 19%;
+}
+.testimonial2{
+    margin-left: 50%;
+    margin-top: -30%;
+}
+.testimonial2 img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 15%;
+}
+.testimonial2 .stars{
+    margin-left: 19%;
+}
+.name{
+    margin-left: 19%;
+}
+.news{
+    margin-top: 30%;
+    margin-left: 48%;
+}
+.news h1{
+    margin-left: -20%;
+}
+.sub{
+    margin-left: 38%;
+    margin-top: 5%;
+}
+.srch{
+    width: 350px;
+    height: 50px;
+    background: transparent;
+    color: black;
+    border: 3px solid rgb(155, 167, 167);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sub button{
+    height: 47px;
+    background-color: orangered;
+    color: aliceblue;
+    border: 2px solid orangered;
+    cursor: pointer;
+}
+.pagination{
+    margin-top: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+.pag2{
+    margin-left: 14%;
+    margin-top: -11.5%;
+}
+.pag3{
+    margin-left: 28%;
+    margin-top: -11.5%;
+}
+.pag4{
+    margin-left: 45%;
+    margin-top: -11.5%;
 }
     
 
@@ -537,5 +609,56 @@ border-radius: 0px;
     .test h1{
         font-weight: bold;
         margin-left: 5%;
+    }
+    .testimonial img{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin-left: 7%;
+    }
+    .testimonial{
+        margin-left: 20%;
+    }
+    .testimonial .stars{
+        margin-left: 6%;
+    }
+    .testimonial2{
+        margin-left: 20%;
+        margin-top: 10%;
+    }
+    .news{
+        margin-top: 30%;
+        margin-left: 40%;
+    }
+    .news h1{
+        margin-left: -20%;
+    }
+    .sub{
+        margin-left: 20%;
+        margin-top: 10%;
+    }
+    .srch{
+        width: 250px;
+        height: 30px;
+        background: transparent;
+        color: black;
+        border: 3px solid rgb(155, 167, 167);
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .sub button{
+        height: 30px;
+        background-color: orangered;
+        color: aliceblue;
+        border: 2px solid orangered;
+        cursor: pointer;
+    }
+    .pagination{
+        margin-top: 10%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10px;
+    }
+    .pag2{
+        margin-left: 20%;
     }
 }
