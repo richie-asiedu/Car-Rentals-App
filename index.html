@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
+    <div class="login-container">
+        <h2>LogIn Form</h2>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your Password" required>
+            <input type="checkbox" onclick="password.type = this.checked ? 'text' : 'password'">
+        </div>
+        <button class="btn" id="btn" disabled>LogIn</button>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

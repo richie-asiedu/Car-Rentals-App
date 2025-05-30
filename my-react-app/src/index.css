@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0%;
+    text-decoration: none;
+    font-family: "Poetsen One", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    cursor: pointer;
+    line-height: 1;
+    color: inherit;
+}
+.btn{
+    background: #fff;
+    color: rgb(153, 30, 30);
+    padding: 11px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgba(128, 17, 7, 0.62);
+    border: none;
+}
+.btn:hover{
+    color: rgb(235, 15, 15);
+    background: #ebe6e6;
+    transition: 1s;
+}
+h3{
+    font-weight: 800;
+}
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+@media (max-width: 1200px) {
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .btn{
+        padding: 7px 10px;
+    }
+}

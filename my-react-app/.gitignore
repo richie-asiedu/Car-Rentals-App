@@ -1,0 +1,46 @@
+# Environment files
+.env
+.env.*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Ignore node modules
+node_modules/
+dist
+dist-ssr
+*.local
+
+# Dependency directories
+client/node_modules/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional npm cache directory
+.npm/
+
+# Build output
+client/build/
+client/dist/
+
+# Test coverage
+client/coverage/
+
+# Windows
+Thumbs.db
+ehthumbs.db
