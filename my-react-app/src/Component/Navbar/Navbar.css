@@ -266,7 +266,7 @@ body.dark-mode .navbar {
 }
 
 body.dark-mode .navbar-brand h1 {
-  color: #63b3ed; /* A lighter blue for dark mode */
+  color: #63b3ed; 
 }
 
 body.dark-mode .search-bar {

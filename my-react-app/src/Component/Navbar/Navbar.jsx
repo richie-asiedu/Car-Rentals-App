@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom'
 import { FaHeart, FaBell, FaCog, FaUser, FaSearch, FaFilter } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -14,7 +15,10 @@ const Navbar = () => {
     <div className="navbar-wrapper">
       <nav className="navbar">
         <div className="navbar-brand">
-          <h1>EvansRentals</h1>
+          <Link to="/">
+            <h1>EvansRentals</h1>
+          </Link>
+          
         </div>
 
         <div className="search-container">

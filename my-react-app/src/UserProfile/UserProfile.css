@@ -2,7 +2,7 @@
   display: flex;
   background-color: #f5f5f5;
   min-height: 100vh;
-  overflow-x: hidden;/* Prevent horizontal scroll on smaller devices */
+  overflow-x: hidden;
 }
 
 body.dark-mode .user-profile-container {
@@ -18,10 +18,10 @@ body.dark-mode .user-profile-container {
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  top: 80px; /* Move sidebar down below navbar on larger screens */
+  top: 80px;
   height: 100vh;
   overflow-y: auto;
-  left: 0; /* Always visible on larger screens */
+  left: 0; 
   transition: left 0.5s ease;
   box-shadow: none;
   z-index: 799;
@@ -83,8 +83,8 @@ body.dark-mode .sidebar{
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 200px; /* Increased width to accommodate icons */
-  height: 30px; /* Increased height */
+  width: 200px; 
+  height: 30px;
   margin-left: auto;
 }
 
@@ -103,7 +103,7 @@ body.dark-mode .sidebar{
   bottom: 0;
   background-color: #ccc;
   transition: .4s;
-  border-radius: 30px; /* Adjust border-radius for new height */
+  border-radius: 30px; 
   background-image: none;
   background-size: initial;
   background-position: initial;
@@ -117,8 +117,8 @@ body.dark-mode .sidebar{
 .toggle-switch label:before {
   position: absolute;
   content: "";
-  height: 26px; /* Increased size for thumb */
-  width: 26px; /* Increased size for thumb */
+  height: 26px; 
+  width: 26px; 
   left: 2px;
   bottom: 2px;
   background-color: white;
@@ -127,23 +127,23 @@ body.dark-mode .sidebar{
 }
 
 input:checked + label:before {
-  transform: translateX(40px); /* Adjust translation for new width */
+  transform: translateX(40px);
 }
 
 .main-content-wrapper {
   flex-grow: 1;
-  margin-left: 250px; /* Adjusted to be closer to sidebar */
+  margin-left: 250px; 
   padding: 2rem;
-  margin-top: 64px; /* Align main content with the new sidebar top */
-  display: flex; /* Ensures content inside is flex-enabled */
-  justify-content: center; /* Centers content horizontally within the wrapper */
+  margin-top: 64px; 
+  display: flex; 
+  justify-content: center; 
 }
 
 .main-content {
   display: flex;
   gap: 2rem;
-  max-width: 1400px; /* Increased max-width for larger screens */
-  margin: 0 auto; /* Center the content horizontally */
+  max-width: 1400px; 
+  margin: 0 auto; 
 }
 
 .details-rental-card {
@@ -245,7 +245,7 @@ input:checked + label:before {
   color: #1a202c;
   cursor: pointer;
   appearance: none;
-  padding-right: 1.5rem; /* For custom arrow */
+  padding-right: 1.5rem; 
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%20197.3l-130.3-130.3c-4.5-4.5-11.7-4.5-16.2%200L5.4%20197.3c-4.5%204.5-4.5%2011.7%200%2016.2l16.2%2016.2c4.5%204.5%2011.7%204.5%2016.2%200l94.8-94.8%2094.8%2094.8c4.5%204.5%2011.7%204.5%2016.2%200l16.2-16.2c4.5-4.5%204.5-11.7%200-16.2z%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
@@ -458,21 +458,21 @@ input:checked + label:before {
   .sidebar {
     position: fixed;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    top: 0; /* Ensure it starts from the top on small screens */
-    padding-top: 5rem; /* Add padding to account for navbar area on small screens */
-    width: 100%; /* Full width on smaller screens */
+    top: 0;
+    padding-top: 5rem; 
+    width: 100%; 
     left: -100%;
-    z-index: 2000; /* Hidden by default on smaller screens */
+    z-index: 2000; 
   }
 
   .sidebar.open {
-    left: 0; /* Show sidebar when open */
+    left: 0; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .hamburger-menu {
-    display: flex; /* Show hamburger on smaller screens */
-    z-index: 2050; /* Higher than sidebar, so it's always clickable */
+    display: flex;
+    z-index: 2050; 
   }
   body.dark-mode .hamburger-menu{
     background-color: #3563e9;
@@ -503,16 +503,16 @@ input:checked + label:before {
   }
 
   .main-content-wrapper {
-    margin-left: 0; /* Remove fixed margin when sidebar is hidden */
-    width: 100%; /* Take full width on smaller screens */
-    margin-top: 0; /* Remove top margin on smaller screens */
+    margin-left: 0;
+    width: 100%; 
+    margin-top: 0; 
   }
 
   .toggle-switch {
     position: relative;
     display: inline-block;
-    width: 70px; /* Increased width to accommodate icons */
-    height: 30px; /* Increased height */
+    width: 70px;
+    height: 30px; 
     margin-left: auto;
   }
 
@@ -590,7 +590,7 @@ input:checked + label:before {
   }
 
   .sidebar-overlay {
-    display: block; /* Show overlay when on smaller screens */
+    display: block; 
     position: fixed;
     top: 0;
     left: 0;
@@ -616,7 +616,7 @@ input:checked + label:before {
 
 /* Hamburger Menu Styles */
 .hamburger-menu {
-  display: none; /* Hidden by default on larger screens */
+  display: none; 
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -649,7 +649,7 @@ input:checked + label:before {
 }
 
 .sidebar-overlay {
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
 /* Dark Mode Styles */
@@ -739,9 +739,9 @@ body.dark-mode .recent-transaction-card .card-header a {
 }
 
 .donut-chart-center-circle {
-  fill: #ffffff; /* White background for the center */
+  fill: #ffffff; 
 }
 
 body.dark-mode .donut-chart-center-circle {
-  fill: #2d3748; /* Dark mode background for the center */
+  fill: #2d3748; 
 }

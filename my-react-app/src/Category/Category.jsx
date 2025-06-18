@@ -11,15 +11,12 @@ const card = () => {
     <>
     <Navbar />
     <SideBar />
-    {/* Main content area, offset for sidebar and navbar */}
     <div className='lg:ml-[200px] pt-20 w-full px-4 md:px-8 lg:px-12'>
-      {/* Content for Booking, PopularCars, RecommendationCars */}
       <div className='drop flex flex-col space-y-8 py-8'>
         <Booking />
         <PopularCars />
         <RecommendationCars />
       </div>
-      {/* Footer section */}
       <div className='py-2 center'>
         <Footer />
       </div>

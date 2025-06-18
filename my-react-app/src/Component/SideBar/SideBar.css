@@ -44,7 +44,7 @@
     margin-top: 10%;
 }
 
-/* Mobile specific display for icons */
+
 @media (max-width: 767px) {
     .sidebar-container.open .hamburger-icon {
         display: none;
@@ -54,10 +54,9 @@
         margin-top: 70%;
     }
 
-    /* No close icon to display */
 }
 
-/* Desktop styles */
+
 @media (min-width: 768px) {
     .sidebar-container {
         position: fixed;

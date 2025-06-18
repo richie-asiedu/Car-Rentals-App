@@ -4,7 +4,7 @@ import { Menu } from 'lucide-react';
 
 const SideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [price, setPrice] = useState(100); // Initial price for the slider
+    const [price, setPrice] = useState(100); 
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
