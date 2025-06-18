@@ -211,7 +211,6 @@ const Payments = () => {
         </div>
       </div>
 
-      {/* Right Column - Rental Summary */}
       <div className="right-column">
         <div className="rental-summary-container">
           <div className="rental-summary-header">

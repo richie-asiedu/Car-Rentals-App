@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Heart, Star } from 'lucide-react';
-import './Details.css'; // Import the CSS file
+import './Details.css';
 import image8 from '../assets/image 8.png';
 import imageV2 from '../assets/View 2.png';
 import imageV3 from '../assets/View 3 (1).png';
@@ -38,7 +38,6 @@ const CarDetails = () => {
                     Safety and comfort with driving a futuristic and elegant sports car
                   </p>
                 </div>
-                {/* Car Image */}
                 <div className="hero-car-image-wrapper">
                   <img
                     src={carImages[selectedImage]}
@@ -48,7 +47,6 @@ const CarDetails = () => {
                 </div>
               </div>
             </div>
-            {/* Bottom Image Row */}
             <div className="thumbnail-grid">
               {carImages.map((image, index) => (
                 <div
@@ -68,9 +66,7 @@ const CarDetails = () => {
             </div>
           </div>
 
-          {/* Right Section - Car Details */}
           <div className="car-details-card">
-            {/* Header with Heart */}
             <div className="car-details-header">
               <div>
                 <h2>
@@ -98,7 +94,6 @@ const CarDetails = () => {
               unforgiving proving ground, the "race track".
             </p>
 
-            {/* Specifications Grid */}
             <div className="specifications-grid">
               <div className="spec-item">
                 <p className="spec-label">Type Car</p>
