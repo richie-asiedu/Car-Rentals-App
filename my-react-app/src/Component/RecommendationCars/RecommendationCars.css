@@ -93,6 +93,10 @@
     font-size: 14px;
     font-weight: 700;
   }
+  .dark-mode .recommendation-cars-container .car-title h3,
+  .dark-mode .recommendation-cars-container .car-category {
+    color: #ffffff;
+  }
   
   .recommendation-cars-container .favorite-btn {
     background: none;

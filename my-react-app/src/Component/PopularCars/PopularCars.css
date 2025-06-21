@@ -59,7 +59,10 @@
   margin: 0;
   color: #1a202c;
 }
-
+.dark-mode .popular-cars-container .car-title h3,
+.dark-mode .popular-cars-container .car-category {
+  color: #ffffff;
+}
 .popular-cars-container .car-category {
   color: #718096;
   font-size: 14px;
