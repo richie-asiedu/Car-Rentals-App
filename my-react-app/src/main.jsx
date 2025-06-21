@@ -8,9 +8,11 @@ import Details from './Details/Details.jsx'
 import Review from './Review/Review.jsx'
 import FullPaymentsForm from './FullPaymentsForm/FullPaymentsForm.jsx'
 import UserProfile from './UserProfile/UserProfile.jsx'
+import ScrollToTop from './Component/ScrollToTop.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="category" element={<Category />} />

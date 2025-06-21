@@ -16,7 +16,7 @@ import Niss from '../assets/image 8.png';
 import Car2 from '../assets/image 7.png';
 import Car3 from '../assets/Car.png';
 import Car4 from '../assets/image 10.png';
-import { FaMapMarkerAlt, FaCalendarAlt, FaExchangeAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCalendarAlt, FaExchangeAlt, FaBars } from 'react-icons/fa';
 import { Sun, Moon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -115,13 +115,9 @@ const UserProfile = () => {
 
   return (
     <div className={`user-profile-container ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-      <div className={`hamburger-menu ${isSidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
       {isSidebarOpen && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+        
         {/* Sidebar Content */}
         <div className="main-menu">
           <h2>MAIN MENU</h2>
@@ -187,6 +183,9 @@ const UserProfile = () => {
         </div>
       </div>
       <div className="main-content-wrapper">
+        <button className="profile-hamburger-button" onClick={toggleSidebar}>
+            <FaBars />
+        </button>
         <div className="main-content">
           <div className="details-rental-card">
             <h2>Details Rental</h2>
@@ -411,7 +410,7 @@ const UserProfile = () => {
           </div>
         </div>
       </div>
-      <Navbar />
+      <Navbar showMenuButton={false} onMenuClick={toggleSidebar} isMenuOpen={isSidebarOpen} />
     </div>
   );
 };

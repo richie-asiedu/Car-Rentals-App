@@ -1,5 +1,7 @@
 import React from 'react';
 import './Review.css';
+import avatar1 from '../assets/Profill (2).png';
+import avatar2 from '../assets/Profill (3).png';
 
 const Review = () => {
   const reviews = [
@@ -9,7 +11,7 @@ const Review = () => {
       title: 'CEO at Bukalapak',
       date: '21 July 2022',
       rating: 4, 
-      avatar: 'https://i.ibb.co/V92W11c/Nissan-GT-R.png', 
+      avatar: avatar1, 
       text: 'We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.'
     },
     {
@@ -18,7 +20,7 @@ const Review = () => {
       title: 'CEO at Amazon',
       date: '20 July 2022',
       rating: 3, 
-      avatar: 'https://i.ibb.co/V92W11c/Nissan-GT-R.png',
+      avatar: avatar2,
       text: 'We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.'
     },
   ];
@@ -27,7 +29,7 @@ const Review = () => {
     <div className="reviews-container container">
       <div className="reviews-header">
         <h2>Reviews</h2>
-        <span className="reviews-count">{reviews.length}</span>
+        <span className="reviews-count">13</span>
       </div>
 
       {reviews.map(review => (

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom'
-import { FaHeart, FaBell, FaCog, FaUser, FaSearch, FaFilter } from 'react-icons/fa';
+import { FaHeart, FaBell, FaCog, FaUser, FaSearch, FaFilter, FaBars, FaTimes } from 'react-icons/fa';
 
-const Navbar = () => {
+const Navbar = ({ showMenuButton, onMenuClick, isMenuOpen }) => {
   const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState({
     priceRange: 'all',
@@ -14,6 +14,11 @@ const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <nav className="navbar">
+        {showMenuButton && (
+          <button className="navbar-menu-button" onClick={onMenuClick}>
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        )}
         <div className="navbar-brand">
           <Link to="/">
             <h1>EvansRentals</h1>

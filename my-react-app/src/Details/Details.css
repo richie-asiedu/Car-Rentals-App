@@ -411,3 +411,60 @@
     font-size: 16px;
   }
 }
+
+/* Dark Mode Styles */
+body.dark-mode .car-details-page {
+  background-color: #1a202c;
+}
+
+body.dark-mode .car-details-card {
+  background-color: #2d3748;
+}
+
+body.dark-mode .car-details-header h2,
+body.dark-mode .spec-value,
+body.dark-mode .current-price span:first-child {
+  color: #e2e8f0;
+}
+
+body.dark-mode .reviewer-count,
+body.dark-mode .description-text,
+body.dark-mode .spec-label,
+body.dark-mode .current-price span:last-child,
+body.dark-mode .original-price span {
+  color: #a0aec0;
+}
+
+body.dark-mode .star-rating-details .empty-star {
+  color: #4a5568;
+}
+
+body.dark-mode .like-button .heart-icon.unliked {
+  color: #718096;
+}
+
+body.dark-mode .original-price .line-through {
+  background-color: #a0aec0;
+}
+
+body.dark-mode .rent-now-button-details {
+  background-color: #2b6cb0;
+  color: #e2e8f0;
+}
+
+body.dark-mode .rent-now-button-details:hover {
+  background-color: #2c5282;
+}
+
+body.dark-mode .thumbnail-item {
+  background-color: #2d3748;
+}
+
+body.dark-mode .thumbnail-item:not(.selected):hover {
+  background-color: #4a5568;
+}
+
+body.dark-mode .thumbnail-item.selected {
+  background-color: #3563e9;
+  border-color: #63b3ed;
+}
