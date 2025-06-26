@@ -10,6 +10,13 @@ import { Link } from 'react-router-dom';
 const Payments = () => {
   const [rentalType, setRentalType] = useState('pick-up');
   const [paymentMethod, setPaymentMethod] = useState('credit-card');
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleRentalTypeChange = (event) => {
     setRentalType(event.target.value);
@@ -119,71 +126,86 @@ const Payments = () => {
 
         {/* Payment Method Section */}
         <div className="form-section payment-method-section">
-          <div className="section-header">
-            <h2>Payment Method</h2>
-            <p>Please enter your payment method</p>
+          <div className="section-header payment-method-header-titles">
+            <h2 className="payment-method-title">Payment Method</h2>
+            <p className="payment-method-subtitle">Please enter your payment method</p>
           </div>
-          <div className="radio-group">
-            <label>
+          <div className="payment-method-header">
+            <div className="payment-method-radio-label">
               <input
                 type="radio"
+                className="payment-radio"
                 name="payment-method"
                 value="credit-card"
                 checked={paymentMethod === 'credit-card'}
                 onChange={handlePaymentMethodChange}
-              /> Credit Card
-              <div className="payment-icons">
-                <img src={Visa} alt="Visa" />
-              </div>
-            </label>
-            {paymentMethod === 'credit-card' && (
-              <div className="credit-card-fields">
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="card-number">Card Number</label>
-                    <input type="text" id="card-number" placeholder="Card number" />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="expiration-date">Expiration Date</label>
-                    <input type="text" id="expiration-date" placeholder="DD / MM / YY" />
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="card-holder">Card Holder</label>
-                    <input type="text" id="card-holder" placeholder="Card holder" />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="cvc">CVC</label>
-                    <input type="text" id="cvc" placeholder="CVC" />
-                  </div>
-                </div>
-              </div>
-            )}
+              />
+              <span className="payment-method-radio-text">Credit Card</span>
+            </div>
+            <div className="credit-card-logos">
+              <img src={Visa} alt="Visa" />
+            </div>
           </div>
-          <div className="radio-group">
-            <label>
+
+          {paymentMethod === 'credit-card' && (
+            <div className="credit-card-fields credit-card-form-cols">
+              <div>
+                <div className="form-group">
+                  <label htmlFor="card-number">Card Number</label>
+                  <input type="text" id="card-number" placeholder="Card number" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="card-holder">Card Holder</label>
+                  <input type="text" id="card-holder" placeholder="Card holder" />
+                </div>
+              </div>
+              <div>
+                <div className="form-group">
+                  <label htmlFor="expiration-date">Expiration Date</label>
+                  <input type="text" id="expiration-date" placeholder="DD / MM / YY" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="cvc">CVC</label>
+                  <input type="text" id="cvc" placeholder="CVC" />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* PayPal Option */}
+          <div className="payment-method-option paypal-method-option">
+            <label className="payment-method-radio-label">
               <input
                 type="radio"
+                className="payment-radio"
                 name="payment-method"
                 value="paypal"
                 checked={paymentMethod === 'paypal'}
                 onChange={handlePaymentMethodChange}
-              /> PayPal
-              <img src={Paypal} alt="PayPal" className="payment-icons" />
+              />
+              <span className="payment-method-radio-text">PayPal</span>
             </label>
+            <span className="paypal-logo-wrapper">
+              <img src={Paypal} alt="PayPal" className="paypal-logo" />
+            </span>
           </div>
-          <div className="radio-group">
-            <label>
+
+          {/* Bitcoin Option */}
+          <div className="payment-method-option bitcoin-method-option">
+            <label className="payment-method-radio-label">
               <input
                 type="radio"
+                className="payment-radio"
                 name="payment-method"
                 value="bitcoin"
                 checked={paymentMethod === 'bitcoin'}
                 onChange={handlePaymentMethodChange}
-              /> Bitcoin
-              <img src={Bitcoin} alt="Bitcoin" className="payment-icons" />
+              />
+              <span className="payment-method-radio-text">Bitcoin</span>
             </label>
+            <span className="bitcoin-logo-wrapper">
+              <img src={Bitcoin} alt="Bitcoin" className="bitcoin-logo" />
+            </span>
           </div>
         </div>
         
@@ -205,7 +227,7 @@ const Payments = () => {
           </Link>
           <div className="security-info">
             <img src={Shield} alt="Shield" />
-            <p>All your data are safe</p>
+            <h4>All your data are safe</h4>
             <p>We are using the most advanced security to provide the best experience ever.</p>
           </div>
         </div>
@@ -218,30 +240,30 @@ const Payments = () => {
             <p>Prices may change depending on the length of the rental and the price of your rental car.</p>
           </div>
 
-          <div className="car-details">
+          <div className="car-details alt-layout">
             <div className="car-image-wrapper">
               <img src={Car} alt="Nissan GT-R" className="car-image" />
             </div>
-            <div className="car-info">
-              <h3>Nissan GT - R</h3>
-              <div className="star-rating">
+            <div className="car-info-vertical">
+              <h4 className="car-title-alt">Nissan GT - R</h4>
+              <div className="star-review-row-alt">
                 <span className="star">&#9733;</span>
                 <span className="star">&#9733;</span>
                 <span className="star">&#9733;</span>
                 <span className="star">&#9733;</span>
                 <span className="star empty">&#9733;</span>
-                <span>440+ Reviewer</span>
+                <span className="reviewer-count">440+ Reviewer</span>
               </div>
             </div>
           </div>
 
           <div className="price-breakdown">
             <div className="price-item">
-              <span>Subtotal</span>
+              <p>Subtotal</p>
               <span>$80.00</span>
             </div>
             <div className="price-item">
-              <span>Tax</span>
+              <p>Tax</p>
               <span>$0</span>
             </div>
           </div>
@@ -255,7 +277,7 @@ const Payments = () => {
             <h3>Total Rental Price</h3>
             <span>$80.00</span>
           </div>
-          <p className="rental-discount-info">Overall price and includes rental discount</p>
+          <p className="rental-discount-info">{isMobile ? 'Overall price rental' : 'Overall price and includes rental discount'}</p>
         </div>
       </div>
     </div>

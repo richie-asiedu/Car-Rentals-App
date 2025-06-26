@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+import './Nav2.css';
 import { Link } from 'react-router-dom'
-import { FaHeart, FaBell, FaCog } from 'react-icons/fa';
+import { FaHeart, FaBell, FaCog, FaBars, FaTimes } from 'react-icons/fa';
 import filterIcon from '../../assets/Filter.png';
 import searchIcon from '../../assets/search-normal.png';
 
-const Navbar = () => {
+const Nav2 = ({ toggleSidebar, isSidebarOpen }) => {
   const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState({
     priceRange: 'all',
@@ -108,4 +108,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Nav2;

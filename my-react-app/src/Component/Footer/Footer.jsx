@@ -1,19 +1,16 @@
-import React from 'react'
-import './Footer.css'
+import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-brand">
-          <h2 className="brand-name">EvansRentals</h2>
-          <p className="brand-description">
-            Our vision is to provide convenience and help increase your sales business.
-          </p>
+    <footer className="footer-container">
+      <div className="footer-content">
+        <div className="footer-section about">
+          <h2 className="footer-logo">EvansRentals</h2>
+          <p>Our vision is to provide convenience and help increase your sales business.</p>
         </div>
-
-        <div className="footer-links">
-          <div className="footer-section">
+        <div className="footer-links-wrapper">
+          <div className="footer-section links">
             <h3>About</h3>
             <ul>
               <li><a href="#">How it works</a></li>
@@ -22,8 +19,7 @@ const Footer = () => {
               <li><a href="#">Bussiness Relation</a></li>
             </ul>
           </div>
-
-          <div className="footer-section">
+          <div className="footer-section links">
             <h3>Community</h3>
             <ul>
               <li><a href="#">Events</a></li>
@@ -32,8 +28,7 @@ const Footer = () => {
               <li><a href="#">Invite a friend</a></li>
             </ul>
           </div>
-
-          <div className="footer-section">
+          <div className="footer-section links">
             <h3>Socials</h3>
             <ul>
               <li><a href="#">Discord</a></li>
@@ -44,18 +39,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
       <div className="footer-bottom">
-        <div className="footer-container">
-          <p className="copyright">©2022 EvansRentals. All rights reserved</p>
-          <div className="legal-links">
-            <a href="#">Privacy & Policy</a>
-            <a href="#">Terms & Condition</a>
-          </div>
+        <p>©2022 MORENT. All rights reserved</p>
+        <div className="footer-legal">
+          <a href="#">Privacy & Policy</a>
+          <a href="#">Terms & Condition</a>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer; 

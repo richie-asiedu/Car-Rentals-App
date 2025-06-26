@@ -13,16 +13,13 @@
 }
 body{
     scroll-behavior: smooth;
+    background: #f6f7f9;
 }
 .container{
-    padding-left: 8%;
-    padding-right: 8%;
+    margin-left: 1.1%;
+    padding-left: 1.1%;
 }
 .paddings{
     margin-left: 4.6%;
     padding-left: 4.6%;
-}
-.center{
-    margin-left: 6.5%;
-    padding-left: 6.5%;
 }

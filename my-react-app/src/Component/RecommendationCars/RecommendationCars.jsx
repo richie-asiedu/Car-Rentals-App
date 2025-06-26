@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './RecommendationCars.css'
-import { FaGasPump, FaUsers, FaCog } from 'react-icons/fa'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 import Car1 from '../../assets/image 9.png'
 import Car2 from '../../assets/image 10.png'
 import Car3 from '../../assets/image 11.png'
@@ -10,6 +10,10 @@ import Car5 from '../../assets/image 13.png'
 import Car6 from '../../assets/image 14.png'
 import Car7 from '../../assets/image 15.png'
 import Car8 from '../../assets/image 16.png'
+import gasIcon from '../../assets/Vector1.png'
+import transmissionIcon from '../../assets/Car (9).png'
+import capacityIcon from '../../assets/profile-2user.png'
+
 const RecommendationCars = () => {
   const [likedCars, setLikedCars] = useState([2, 4, 5, 7]); 
 
@@ -129,15 +133,15 @@ const RecommendationCars = () => {
 
             <div className="car-specs">
               <div className="spec-item">
-                <FaGasPump className="spec-icon" />
+                <img src={gasIcon} alt="Fuel" className="spec-icon" />
                 <span>{car.fuelCapacity}</span>
               </div>
               <div className="spec-item">
-                <FaCog className="spec-icon" />
+                <img src={transmissionIcon} alt="Transmission" className="spec-icon" />
                 <span>{car.transmission}</span>
               </div>
               <div className="spec-item">
-                <FaUsers className="spec-icon" />
+                <img src={capacityIcon} alt="Capacity" className="spec-icon" />
                 <span>{car.capacity}</span>
               </div>
             </div>
@@ -154,12 +158,17 @@ const RecommendationCars = () => {
                   </div>
                 )}
               </div>
-              <button className="rent-button">Rent Now</button>
+              <Link to="/details" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <button className="rent-button">Rent Now</button>
+              </Link>
             </div>
           </div>
         ))}
       </div>
-      <button className="show-all-cars-btn">Show More Cars</button>
+      <div className="show-more-container">
+        <button className="show-all-cars-btn">Show more car</button>
+        <span className="car-count">120 Cars</span>
+      </div>
     </div>
   );
 };

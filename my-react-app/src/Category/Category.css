@@ -4,4 +4,16 @@ body.dark-mode .category-page {
   
   .drop {
     margin-top: 5rem;
+  }
+
+  .category-page {
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 760px) {
+    .category-page main {
+      margin-top: 140px;
+    }
   } 
+
+  

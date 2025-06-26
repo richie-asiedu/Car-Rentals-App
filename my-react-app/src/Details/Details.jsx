@@ -1,153 +1,64 @@
 import React, { useState } from 'react';
-import { Heart, Star } from 'lucide-react';
-import './Details.css';
-import image8 from '../assets/image 8.png';
-import imageV2 from '../assets/View 2.png';
-import imageV3 from '../assets/View 3 (1).png';
-import Review from '../Review/Review';
-import RecommendationCars from '../Component/RecommendationCars/RecommendationCars';
-import Navbar from '../Component/Navbar/Navbar';
+import Nav2 from '../Component/Nav2/Nav2';
 import SideBar from '../Component/SideBar/SideBar';
 import PopularCars from '../Component/PopularCars/PopularCars';
-import { Link } from 'react-router-dom';
+import RecommendationCars from '../Component/RecommendationCars/RecommendationCars';
+import Footer from '../Component/Footer/Footer';
+import Review from '../Review/Review';
+import { FaBars } from 'react-icons/fa';
 
-const CarDetails = () => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(0);
-  const carImages = [
-    image8,
-    imageV2,
-    imageV3
-  ];
+const Details = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
+  const closeSidebar = () => setIsSidebarOpen(false);
 
   return (
-    <div className="car-details-page">
-      <div className="main-content-wrapper">
-        <div className="details-grid">
-
-          {/* Left Section - Hero Card */}
-          <div className="hero-card-section">
-            {/* Main Hero Card */}
-            <div className="main-hero-card paddings">
-              <div className="hero-card-content">
-                <div className="hero-card-text">
-                  <h1>
-                    Sports car with the best design and acceleration
-                  </h1>
-                  <p>
-                    Safety and comfort with driving a futuristic and elegant sports car
-                  </p>
-                </div>
-                <div className="hero-car-image-wrapper">
-                  <img
-                    src={carImages[selectedImage]}
-                    alt="Sports Car"
-                    className="hero-car-image"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="thumbnail-grid">
-              {carImages.map((image, index) => (
-                <div
-                  key={index}
-                  onClick={() => setSelectedImage(index)}
-                  className={`thumbnail-item ${selectedImage === index ? 'selected' : ''}`}
-                >
-                  <div className="thumbnail-image-wrapper">
-                    <img
-                      src={image}
-                      alt={`Car view ${index + 1}`}
-                      className="thumbnail-image"
-                    />
-                  </div>
-                </div>
-              ))}
+    <div className='category-page flex flex-col bg-gray-50'>
+      <Nav2 />
+      <div className="flex flex-1">
+        {/* Sidebar for large screens */}
+        <aside className="hidden lg:block w-1/5 min-w-[280px] bg-white border-r px-6 py-8">
+          <SideBar isOpen={true} />
+        </aside>
+        {/* Hamburger for mobile */}
+        <button
+          className="fixed top-5 left-4 z-[1100] bg-white rounded-full shadow p-2 lg:hidden"
+          onClick={toggleSidebar}
+          aria-label="Open sidebar"
+        >
+          <FaBars size={24} />
+        </button>
+        {/* Sidebar overlay for mobile */}
+        {isSidebarOpen && (
+          <div className="fixed inset-0 z-[1200] bg-black bg-opacity-40 flex lg:hidden" onClick={closeSidebar}>
+            <div
+              className="bg-white w-4/5 max-w-[350px] h-full p-6 shadow-lg relative"
+              onClick={e => e.stopPropagation()}
+            >
+              <SideBar isOpen={isSidebarOpen} onClose={closeSidebar} />
             </div>
           </div>
-
-          <div className="car-details-card">
-            <div className="car-details-header">
-              <div>
-                <h2>
-                  Nissan GT-R
-                </h2>
-                <div className="star-rating-details">
-                  {[...Array(4)].map((_, i) => (
-                    <Star key={i} className="star-icon" />
-                  ))}
-                  <Star className="star-icon empty-star" />
-                  <span className="reviewer-count">440+ Reviewer</span>
-                </div>
-              </div>
-              <button
-                onClick={() => setIsLiked(!isLiked)}
-                className="like-button"
-              >
-                <Heart className={`heart-icon ${isLiked ? 'liked' : 'unliked'}`} />
-              </button>
-            </div>
-
-            {/* Description */}
-            <p className="description-text">
-              NISMO has become the embodiment of Nissan's outstanding performance. Inspired by the most
-              unforgiving proving ground, the "race track".
-            </p>
-
-            <div className="specifications-grid">
-              <div className="spec-item">
-                <p className="spec-label">Type Car</p>
-                <p className="spec-value">Sport</p>
-              </div>
-              <div className="spec-item">
-                <p className="spec-label">Capacity</p>
-                <p className="spec-value">2 Person</p>
-              </div>
-              <div className="spec-item">
-                <p className="spec-label">Steering</p>
-                <p className="spec-value">Manual</p>
-              </div>
-              <div className="spec-item">
-                <p className="spec-label">Gasoline</p>
-                <p className="spec-value">70L</p>
-              </div>
-            </div>
-            {/* Pricing and Button */}
-            <div className="pricing-section">
-              <div>
-                <div className="current-price">
-                  <span>$80.00/</span>
-                  <span>day</span>
-                </div>
-                <div className="original-price">
-                  <span>$100.00</span>
-                  <div className="line-through"></div>
-                </div>
-              </div>
-              <Link to="/fullpaymentsform" className="rent-now-link">
-                <button className="rent-now-button-details">
-                  Rent Now
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="mb-[10%]">
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch"></div>
-        </div>
+        )}
+        {/* Main Content */}
+        <main
+          className="flex-1 flex flex-col px-2 md:px-5 lg:px-8 pt-0 pb-0"
+          style={{
+            overflowX: 'auto',
+            overflowY: 'auto',
+            paddingTop: 0
+          }}
+        >
+          {/* Car Cards Grid */}
+          <section className="flex-1" style={{ width: '100%' }}>
+            <Review />
+            <PopularCars />
+            <RecommendationCars />
+          </section>
+        </main>
       </div>
-
-      <div className="other-sections-wrapper paddings">
-        <div className="mt-[82px]">
-          <Review />
-        </div>
-        <Navbar />
-        <SideBar />
-        <PopularCars />
-        <RecommendationCars />
-      </div>
+      <Footer />
     </div>
   );
 };
 
-export default CarDetails;
+export default Details;

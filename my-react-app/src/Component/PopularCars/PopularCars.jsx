@@ -6,6 +6,9 @@ import Car from '../../assets/Car.png'
 import carImage from '../../assets/image 8.png'
 import carImage2 from '../../assets/image 7.png'
 import { Link } from 'react-router-dom'
+import gasIcon from '../../assets/Vector1.png'
+import transmissionIcon from '../../assets/Car (9).png'
+import capacityIcon from '../../assets/profile-2user.png'
 
 const PopularCars = () => {
   const [likedCars, setLikedCars] = useState([1, 3]); 
@@ -87,15 +90,15 @@ const PopularCars = () => {
 
             <div className="car-specs">
               <div className="spec-item">
-                <FaGasPump className="spec-icon" />
+                <img src={gasIcon} alt="Fuel" className="spec-icon" />
                 <span>{car.fuelCapacity}</span>
               </div>
               <div className="spec-item">
-                <FaCog className="spec-icon" />
+                <img src={transmissionIcon} alt="Transmission" className="spec-icon" />
                 <span>{car.transmission}</span>
               </div>
               <div className="spec-item">
-                <FaUsers className="spec-icon" />
+                <img src={capacityIcon} alt="Capacity" className="spec-icon" />
                 <span>{car.capacity}</span>
               </div>
             </div>

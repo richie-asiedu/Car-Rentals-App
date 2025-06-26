@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SideBar.css';
-import { Menu } from 'lucide-react';
+import { FaTimes } from 'react-icons/fa';
 
-const SideBar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [price, setPrice] = useState(100); 
-
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
-    };
+const SideBar = ({ isOpen, onClose }) => {
+    const [price, setPrice] = React.useState(100);
 
     const handlePriceChange = (event) => {
         setPrice(event.target.value);
@@ -16,63 +11,63 @@ const SideBar = () => {
 
     return (
         <>
-            <button className="hamburger-icon" onClick={toggleSidebar}>
-                <Menu size={24} />
-            </button>
-            <div className={`sidebar-container ${isOpen ? 'open' : ''}`}>
-                {/* <button className="close-icon" onClick={toggleSidebar}> */}
-                {/* &times; */}
-                {/* </button> */}
-                <div className="sidebar-content">
+            {/* Close button for mobile overlay */}
+            {onClose && (
+                <button className="close-icon block lg:hidden absolute top-4 right-4 z-50 bg-gray-100 rounded-full p-2" onClick={onClose} aria-label="Close sidebar">
+                    <FaTimes size={24} />
+                </button>
+            )}
+            <div className={`sidebar-container${isOpen ? ' open' : ''}`}>
+                <div className="sidebar-image-layout">
                     <div className="filter-section">
-                        <h3>TYPE</h3>
-                        <label>
-                            <input type="checkbox" defaultChecked /> Sport (10)
+                        <h3 className="sidebar-section-title">TYPE</h3>
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" defaultChecked /> Sport <span className="sidebar-count">(10)</span>
                         </label>
-                        <label>
-                            <input type="checkbox" defaultChecked /> SUV (12)
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" defaultChecked /> SUV <span className="sidebar-count">(12)</span>
                         </label>
-                        <label>
-                            <input type="checkbox" /> MPV (16)
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" /> MPV <span className="sidebar-count">(16)</span>
                         </label>
-                        <label>
-                            <input type="checkbox" /> Sedan (20)
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" /> Sedan <span className="sidebar-count">(20)</span>
                         </label>
-                        <label>
-                            <input type="checkbox" /> Coupe (14)
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" /> Coupe <span className="sidebar-count">(14)</span>
                         </label>
-                        <label>
-                            <input type="checkbox" /> Hatchback (14)
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" /> Hatchback <span className="sidebar-count">(14)</span>
                         </label>
                     </div>
 
                     <div className="filter-section">
-                        <h3>CAPACITY</h3>
-                        <label>
-                            <input type="checkbox" defaultChecked /> 2 Person (10)
+                        <h3 className="sidebar-section-title">CAPACITY</h3>
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" defaultChecked /> 2 Person <span className="sidebar-count">(10)</span>
                         </label>
-                        <label>
-                            <input type="checkbox" /> 4 Person (14)
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" /> 4 Person <span className="sidebar-count">(14)</span>
                         </label>
-                        <label>
-                            <input type="checkbox" /> 6 Person (12)
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" /> 6 Person <span className="sidebar-count">(12)</span>
                         </label>
-                        <label>
-                            <input type="checkbox" defaultChecked /> 8 or More (16)
+                        <label className="sidebar-checkbox">
+                            <input type="checkbox" defaultChecked /> 8 or More <span className="sidebar-count">(16)</span>
                         </label>
                     </div>
 
-                    <div className="filter-section price-filter">
-                        <h3>PRICE</h3>
+                    <div className="filter-section">
+                        <h3 className="sidebar-section-title">PRICE</h3>
                         <input
                             type="range"
                             min="0"
                             max="200"
                             value={price}
                             onChange={handlePriceChange}
-                            className="price-slider"
+                            className="sidebar-slider"
                         />
-                        <p>Max. ${price}.00</p>
+                        <p className="sidebar-price-label">Max. ${price}.00</p>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 import React from 'react'
 import './Title.css'
 
-const Title = ({Title}) => {
+const Title = ({Title, showViewAll = true}) => {
   return (
     <div className='title-container'>
       <h4 className='title'>{Title}</h4>
-      <a href="#" className='view-all'>View All</a>
+      {showViewAll && <a href="#" className='view-all'>View All</a>}
     </div>
   )
 }
