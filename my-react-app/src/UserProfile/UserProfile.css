@@ -92,7 +92,7 @@ body.dark-mode .sidebar{
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 200px; 
+  width: 110px; 
   height: 30px;
   margin-left: auto;
 }
@@ -238,12 +238,16 @@ input:checked + label:before {
 .rental-points {
   margin-bottom: 1.5rem;
 }
+.rental-points .booking-section .radio-group .radio-label {
+  color: #1a202c;
+}
 
 .pickup-dropoff {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
+
 
 .point {
   display: flex;
@@ -851,25 +855,27 @@ body.dark-mode .recent-transaction-card h2 {
   color: #e2e8f0;
 }
 
-body.dark-mode .car-details h3,
-body.dark-mode .price-value h3,
+body.dark-mode .car-detail h3,
+body.dark-mode .radio-label,
+body.dark-mode .card-header h3,
+body.dark-mode .price-value span,
 body.dark-mode .chart-info .total-rental-count,
 body.dark-mode .item-text h3,
 body.dark-mode .item-price-date .price {
   color: #e2e8f0;
 }
 
-body.dark-mode .car-details p,
+body.dark-mode .car-detail p,
 body.dark-mode .car-id,
 body.dark-mode .point-label,
 body.dark-mode .point-selection p,
-body.dark-mode .total-rental-price .price-label h3,
-body.dark-mode .total-rental-price .price-label p,
+body.dark-mode .price-label h3,
+body.dark-mode .price-label p,
 body.dark-mode .chart-info .rental-car-label,
 body.dark-mode .car-categories li,
 body.dark-mode .item-text p,
 body.dark-mode .item-price-date .date {
-  color: #a0aec0;
+  color: #e2e8f0;
 }
 
 body.dark-mode .point-selection input {
@@ -892,6 +898,20 @@ body.dark-mode .recent-transaction-card .card-header a {
 
 body.dark-mode .donut-chart-center-circle {
   fill: #2d3748; 
+}
+body.dark-mode .booking-section .booking-cards h3 {
+  color: #e2e8f0; 
+}
+body.dark-mode .rental-points .booking-section .radio-group .radio-label {
+  color: #e2e8f0;
+}
+body.dark-mode .top-car-rental-card .top-car-rental-header .top-car-rental-dots {
+  background: #e2e8f0; 
+  border-radius: 100px;
+}
+body.dark-mode .car-categories .category-number,
+.main-content-wrapper .rental-points .radio-group span {
+  color: #e2e8f0; 
 }
 
 .profile-hamburger-button {
@@ -930,7 +950,7 @@ body.dark-mode .profile-hamburger-button {
 @media (max-width: 700px) {
   .details-rental-card {
     width: 95vw;
-    max-width: 450px;
+    max-width: 400px;
     margin: 0 auto;
     border-radius: 10px;
     background: #fff;
@@ -938,6 +958,18 @@ body.dark-mode .profile-hamburger-button {
     padding: 1.2rem 0.8rem 1.5rem 0.8rem;
     box-sizing: border-box;
     overflow: hidden;
+  }
+
+  .top-car-rental-card {
+    width: 95vw;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .recent-transaction-card {
+    width: 95vw;
+    max-width: 400px;
+    margin: auto;
   }
 
   .total-rental-price {
@@ -1143,8 +1175,8 @@ body.dark-mode .profile-hamburger-button {
 }
 
 .top-car-rental-dots:hover {
-  transform: scale(1.2) rotate(20deg);
-  filter: brightness(1.5);
+  transform: scale(1.2);
+  filter: brightness(1.7);
   transition: transform 0.2s, filter 0.2s;
 }
 

@@ -18,7 +18,7 @@ const Category = () => {
       <Nav2 />
       <div className="flex flex-1">
         {/* Sidebar for large screens */}
-        <aside className="hidden lg:block w-1/5 min-w-[280px] bg-white border-r px-6 py-8">
+        <aside className="hidden lg:block w-1/5 min-w-[286px] bg-white border-r px-6 py-8">
           <SideBar isOpen={true} />
         </aside>
         {/* Hamburger for mobile */}
@@ -33,7 +33,7 @@ const Category = () => {
         {isSidebarOpen && (
           <div className="fixed inset-0 z-[1200] bg-black bg-opacity-40 flex lg:hidden" onClick={closeSidebar}>
             <div
-              className="bg-white w-4/5 max-w-[350px] h-full p-6 shadow-lg relative"
+              className="bg-white w-4/5 max-w-[355px] h-full p-6 shadow-lg relative"
               onClick={e => e.stopPropagation()}
             >
               <SideBar isOpen={isSidebarOpen} onClose={closeSidebar} />

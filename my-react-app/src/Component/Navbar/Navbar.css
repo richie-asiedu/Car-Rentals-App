@@ -130,11 +130,16 @@ body {
 .filter-group select {
   padding: 8px 12px;
   border-radius: 4px;
+  font-weight: 600;
   border: 1px solid #C3D4E9;
   background-color: #F6F7F9;
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
+}
+
+.filter-group select option {
+  font-weight: 600;
 }
 
 /* Right-side Icons */
@@ -353,9 +358,9 @@ body.dark-mode .navbar-brand h1 {
   color: #63b3ed; 
 }
 
-body.dark-mode .search-bar {
+body.dark-mode .search-container .search-bar {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #5f656b;
 }
 
 body.dark-mode .search-bar:focus-within {
@@ -364,6 +369,7 @@ body.dark-mode .search-bar:focus-within {
 
 body.dark-mode .search-bar input {
   color: #e2e8f0;
+  border-color: #e2e9f1;
 }
 
 body.dark-mode .search-icon,

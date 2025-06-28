@@ -130,11 +130,16 @@ body {
 .filter-group select {
   padding: 8px 12px;
   border-radius: 4px;
+  font-weight: 600;
   border: 1px solid #C3D4E9;
   background-color: #F6F7F9;
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
+}
+
+.filter-group select option {
+  font-weight: 600;
 }
 
 /* Right-side Icons */

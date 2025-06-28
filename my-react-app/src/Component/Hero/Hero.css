@@ -1,9 +1,9 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.5rem;
   padding: 2rem;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 20px auto;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .primary-hero {
-  background: radial-gradient(circle at 30% 100%, #54a6ff 7%, #318ff5 12%, #54a6ff 18%, #318ff5 22%, #54a6ff 29%, #318ff5 33%, #54a6ff 39%, #318ff5 43%, #54a6ff 45%, #318ff5 55%, #54a6ff 65%, #318ff5 78%, #54a6ff 83%, #318ff5 90%, #54a6ff 95%);
+  background: radial-gradient(circle at 30% 100%, #54a6ff 7%, #318ff5 12%, #54a6ff 18%, #318ff5 22%, #54a6ff 29%, #318ff5 33%, #318ff5 39%, #318ff5 43%, #54a6ff 45%, #318ff5 55%, #54a6ff 65%, #318ff5 70%, #318ff5 78%, #54a6ff 83%, #318ff5 90%, #318ff5 93%, #54a6ff 95%);
 }
 
 .secondary-hero {

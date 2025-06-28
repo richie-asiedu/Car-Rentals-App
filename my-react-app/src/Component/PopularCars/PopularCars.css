@@ -204,9 +204,14 @@
   background: #2851db;
 }
 
+body.dark-mode .car-card .car-title h3 {
+  color: #1a202c;
+}
+
 @media (max-width: 768px) {
   .popular-cars-container {
-    padding: 1rem;
+    padding: 2.5rem;
+    width: 100%;
   }
 
   .popular-cars-container .cars-grid {
@@ -214,7 +219,7 @@
   }
 
   .popular-cars-container .car-card {
-    padding: 1rem;
+    padding: 2.5rem;
   }
 
   .popular-cars-container .car-image {

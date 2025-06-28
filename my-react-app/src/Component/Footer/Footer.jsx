@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>©2022 MORENT. All rights reserved</p>
+        <p>©2025 EvansRentals. All rights reserved</p>
         <div className="footer-legal">
           <a href="#">Privacy & Policy</a>
           <a href="#">Terms & Condition</a>
