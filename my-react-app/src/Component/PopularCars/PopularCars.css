@@ -226,3 +226,21 @@ body.dark-mode .car-card .car-title h3 {
     height: 160px;
   }
 }
+
+
+@media (max-width: 320px) {
+  .popular-cars-container .car-specs {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  color: #718096;
+  padding: 0 0.5rem;
+}
+
+.popular-cars-container .spec-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+}
+}
