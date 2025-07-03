@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Category from './Category/Category.jsx'
@@ -11,7 +11,7 @@ import UserProfile from './UserProfile/UserProfile.jsx'
 import ScrollToTop from './Component/ScrollToTop.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
@@ -21,6 +21,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/fullpaymentsform" element={<FullPaymentsForm />} />
         <Route path="/userprofile" element={<UserProfile />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 )

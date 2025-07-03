@@ -896,3 +896,54 @@ body.dark-mode .apply-now-button:hover {
   align-items: center;
   gap: 6px;
 }
+@media (max-width: 350px) {
+  .car-image-wrapper {
+    margin-right: 5px;
+    margin-bottom: 0;
+    width: 160px;
+    height: 70px;
+    margin: auto;
+  }
+  .car-info {
+    width: auto;
+    height: auto;
+    gap: 4px;
+  }
+  .car-info-vertical h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    color: #1a202c;
+    letter-spacing: -3%;
+    line-height: 140%;
+  }
+  .promo-code-section {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 30px;
+    background: #f6f7f9;
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    white-space: nowrap;
+    align-items: center;
+  }
+  .apply-now-button {
+    color: #1a202c;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -2%;
+    border: none;
+    border-radius: 6px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+}
